@@ -1,0 +1,8 @@
+!.storybook
+!.jest
+# Ignore artifacts:
+build
+coverage
+node_modules
+.next
+public

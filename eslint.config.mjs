@@ -16,7 +16,12 @@ const compat = new FlatCompat({
 
 const eslintConfig = [
   ...tseslint.configs.recommended,
-  ...compat.extends('next/core-web-vitals', 'next/typescript', 'prettier'),
+  ...compat.extends(
+    'next/core-web-vitals',
+    'next/typescript',
+    'prettier',
+    'plugin:storybook/recommended'
+  ),
   { files: ['**/*.{js,mjs,cjs,ts,jsx,tsx}'] },
   {
     languageOptions: {
@@ -41,6 +46,9 @@ const eslintConfig = [
       'react/prop-types': 'off',
       '@typescript-eslint/explicit-module-boundary-types': 'off'
     }
+  },
+  {
+    ignores: ['!.storybook', '!.generators']
   }
 ]
 

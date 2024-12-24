@@ -1,4 +1,4 @@
-export default function (plop) {
+module.exports = function (plop) {
   // create your generators here
   plop.setGenerator('component', {
     description: 'Create a component',
